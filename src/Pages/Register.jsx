@@ -22,7 +22,7 @@ const Register = () => {
   const handleRegister = async(e)=> {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/api/v1/user/patient/register", {firstName, lastName, email, phone, adhar, dob, gender, password, role: "Patient" }, {withCredentials: true, headers: {"Content-Type": "application/json"}});
+      const response = await axios.post("https://hospital-management-backend-2mf468f5g-ripunjayrai777s-projects.vercel.app/api/v1/user/patient/register", {firstName, lastName, email, phone, adhar, dob, gender, password, role: "Patient" }, {withCredentials: true, headers: {"Content-Type": "application/json"}});
       toast.success(response.data.message);
       setIsAuthenticated(true);
       navigateTo("/");
