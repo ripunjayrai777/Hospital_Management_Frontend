@@ -36,7 +36,7 @@ const navigateTo = useNavigate();
     const [doctors, setDoctors] = useState([]);
     useEffect(()=>{
         const fetchDoctors = async()=> {
-            const {data} = await axios.get("https:/hospital-management-backend-2mf468f5g-ripunjayrai777s-projects.vercel.app/api/v1/user/doctors", {withCredentials:true});
+            const {data} = await axios.get("https://hospital-management-backend-2mf468f5g-ripunjayrai777s-projects.vercel.app/api/v1/user/doctors", {withCredentials:true});
             setDoctors(data.doctors);
             console.log(data.doctors);
         };
@@ -48,7 +48,7 @@ const navigateTo = useNavigate();
         e.preventDefault();
         try {
             const hasVisitedBool = Boolean(hasVisited);
-            const {data} = await axios.post("https:/hospital-management-backend-2mf468f5g-ripunjayrai777s-projects.vercel.app/api/v1/appointment/post", {
+            const {data} = await axios.post("https://hospital-management-backend-2mf468f5g-ripunjayrai777s-projects.vercel.app/api/v1/appointment/post", {
                 firstName,
                 lastName,
                 email,
