@@ -13,7 +13,7 @@ const MessageForm = () => {
   const handleMessage = async(e)=>{
     e.preventDefault();
     try {
-      await axios.post("https:/hospital-management-backend-2mf468f5g-ripunjayrai777s-projects.vercel.app/api/v1/message/send", {firstName, lastName, email, phone, message}, {withCredentials: true, headers: {
+      await axios.post("https://hospital-management-backend-2mf468f5g-ripunjayrai777s-projects.vercel.app/api/v1/message/send", {firstName, lastName, email, phone, message}, {withCredentials: true, headers: {
         "Content-Type": "application/json",
       },
     }).then((res)=>{
